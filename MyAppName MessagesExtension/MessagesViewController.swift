@@ -11,8 +11,20 @@ import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
     
+    var browserViewController: NatureStickerBrowserViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        browserViewController = NatureStickerBrowserViewController(stickerSize: .regular)
+        browserViewController.view.frame = self.view.bounds
+        
+        self.addChild(browserViewController)
+        browserViewController.didMove(toParent: self)
+        self.view.addSubview(browserViewController.view)
+        
+        browserViewController.loadStickerData()
+        browserViewController.stickerBrowserView.reloadData()
+        browserViewController.changeBackgroundColor(color: .systemPink)
     }
 }
