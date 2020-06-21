@@ -8,8 +8,8 @@
 
 import Messages
 
-struct StickerModel {
-    
+class StickerModel: Hashable {
+
     var id:Int
     var name:String
     var isFree: Bool
@@ -23,6 +23,14 @@ struct StickerModel {
         
         sticker = createSticker(assetName: name, assetDescription: name)
         
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: StickerModel, rhs: StickerModel) -> Bool {
+        return lhs.id == rhs.id
     }
     
     private func createSticker(assetName: String, assetDescription: String) -> MSSticker? {

@@ -13,7 +13,7 @@
 		F022E443249E3AC900BFE089 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022E442249E3AC900BFE089 /* MessagesViewController.swift */; };
 		F022E446249E3AC900BFE089 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F022E444249E3AC900BFE089 /* MainInterface.storyboard */; };
 		F022E448249E3ACA00BFE089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F022E447249E3ACA00BFE089 /* Assets.xcassets */; };
-		F022E454249E3B7F00BFE089 /* NatureStickerBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022E453249E3B7F00BFE089 /* NatureStickerBrowserViewController.swift */; };
+		F022E454249E3B7F00BFE089 /* StickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022E453249E3B7F00BFE089 /* StickersViewController.swift */; };
 		F022E475249E3D2300BFE089 /* Sticker-15.png in Resources */ = {isa = PBXBuildFile; fileRef = F022E456249E3D2100BFE089 /* Sticker-15.png */; };
 		F022E476249E3D2300BFE089 /* Sticker-22.png in Resources */ = {isa = PBXBuildFile; fileRef = F022E457249E3D2100BFE089 /* Sticker-22.png */; };
 		F022E477249E3D2300BFE089 /* Sticker-7.png in Resources */ = {isa = PBXBuildFile; fileRef = F022E458249E3D2100BFE089 /* Sticker-7.png */; };
@@ -46,6 +46,7 @@
 		F022E492249E3D2300BFE089 /* Sticker-16.png in Resources */ = {isa = PBXBuildFile; fileRef = F022E473249E3D2300BFE089 /* Sticker-16.png */; };
 		F022E493249E3D2300BFE089 /* Sticker-21.png in Resources */ = {isa = PBXBuildFile; fileRef = F022E474249E3D2300BFE089 /* Sticker-21.png */; };
 		F022E495249E3D7100BFE089 /* StickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022E494249E3D7100BFE089 /* StickerModel.swift */; };
+		F022E49C249F765000BFE089 /* MyStickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022E49B249F765000BFE089 /* MyStickerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +83,7 @@
 		F022E445249E3AC900BFE089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		F022E447249E3ACA00BFE089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F022E449249E3ACA00BFE089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F022E453249E3B7F00BFE089 /* NatureStickerBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureStickerBrowserViewController.swift; sourceTree = "<group>"; };
+		F022E453249E3B7F00BFE089 /* StickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickersViewController.swift; sourceTree = "<group>"; };
 		F022E456249E3D2100BFE089 /* Sticker-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sticker-15.png"; sourceTree = "<group>"; };
 		F022E457249E3D2100BFE089 /* Sticker-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sticker-22.png"; sourceTree = "<group>"; };
 		F022E458249E3D2100BFE089 /* Sticker-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sticker-7.png"; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		F022E473249E3D2300BFE089 /* Sticker-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sticker-16.png"; sourceTree = "<group>"; };
 		F022E474249E3D2300BFE089 /* Sticker-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sticker-21.png"; sourceTree = "<group>"; };
 		F022E494249E3D7100BFE089 /* StickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerModel.swift; sourceTree = "<group>"; };
+		F022E49B249F765000BFE089 /* MyStickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStickerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				F022E442249E3AC900BFE089 /* MessagesViewController.swift */,
-				F022E453249E3B7F00BFE089 /* NatureStickerBrowserViewController.swift */,
-				F022E494249E3D7100BFE089 /* StickerModel.swift */,
+				F022E453249E3B7F00BFE089 /* StickersViewController.swift */,
+				F022E49D249F765300BFE089 /* Views */,
+				F022E49A249F764200BFE089 /* Models */,
 				F022E455249E3CD000BFE089 /* Resources */,
 				F022E444249E3AC900BFE089 /* MainInterface.storyboard */,
 				F022E447249E3ACA00BFE089 /* Assets.xcassets */,
@@ -215,6 +218,22 @@
 				F022E461249E3D2100BFE089 /* StickerData.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F022E49A249F764200BFE089 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F022E494249E3D7100BFE089 /* StickerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F022E49D249F765300BFE089 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F022E49B249F765000BFE089 /* MyStickerCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,7 +367,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F022E495249E3D7100BFE089 /* StickerModel.swift in Sources */,
-				F022E454249E3B7F00BFE089 /* NatureStickerBrowserViewController.swift in Sources */,
+				F022E49C249F765000BFE089 /* MyStickerCell.swift in Sources */,
+				F022E454249E3B7F00BFE089 /* StickersViewController.swift in Sources */,
 				F022E443249E3AC900BFE089 /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

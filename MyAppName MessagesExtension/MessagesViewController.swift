@@ -9,22 +9,112 @@
 import UIKit
 import Messages
 
+
 class MessagesViewController: MSMessagesAppViewController {
-    
-    var browserViewController: NatureStickerBrowserViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        browserViewController = NatureStickerBrowserViewController(stickerSize: .regular)
-        browserViewController.view.frame = self.view.bounds
-        
-        self.addChild(browserViewController)
-        browserViewController.didMove(toParent: self)
-        self.view.addSubview(browserViewController.view)
-        
-        browserViewController.loadStickerData()
-        browserViewController.stickerBrowserView.reloadData()
-        browserViewController.changeBackgroundColor(color: .systemPink)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    
+    // MARK: - Conversation Handling
+    
+    override func willBecomeActive(with conversation: MSConversation) {
+        super.willBecomeActive(with: conversation)
+        
+        print(#function)
+        present(with: self.presentationStyle)
+    }
+
+    override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
+        super.didTransition(to: presentationStyle)
+        print(#function)
+        present(with: presentationStyle)
+    }
+    
+    private func present(with presentationStyle:MSMessagesAppPresentationStyle) {
+        
+        let rootVC = StickersViewController()
+        
+        for child in children {
+
+            if let navigtionVC = child as? UINavigationController {
+                if let vc = navigtionVC.topViewController as? StickersViewController {
+                    rootVC.count = vc.count
+                }
+            }
+            
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
+        }
+        
+        let navigationVC = UINavigationController(rootViewController: rootVC)
+        
+        
+        let viewController = navigationVC
+        
+        addChild(viewController)
+        
+        viewController.view.frame = view.bounds
+        viewController.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(viewController.view)
+        
+        viewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        viewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        viewController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        viewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        viewController.didMove(toParent: self)
+    }
+    
 }
+
+
+//class MessagesViewController: MSMessagesAppViewController {
+//
+//    override func willBecomeActive(with conversation: MSConversation) {
+//        super.willBecomeActive(with: conversation)
+//
+//        print("124")
+//        present(with: presentationStyle)
+//    }
+//
+//    override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
+//        super.didTransition(to: presentationStyle)
+//
+//        present(with: presentationStyle)
+//
+//    }
+//
+//    private func present(with presentationStyle: MSMessagesAppPresentationStyle) {
+//
+//        let viewController = StickersViewController()
+//
+//        for child in children {
+//            child.willMove(toParent: nil)
+//            child.view.removeFromSuperview()
+//            child.removeFromParent()
+//        }
+//
+//        viewController.view.backgroundColor = .red
+//            // Embed the new controller.
+//            addChild(viewController)
+//
+//            viewController.view.frame = view.bounds
+//            viewController.view.translatesAutoresizingMaskIntoConstraints = false
+//            view.addSubview(viewController.view)
+//
+//            viewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+//            viewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+//            viewController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//            viewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//
+//            viewController.didMove(toParent: self)
+//        }
+//}
