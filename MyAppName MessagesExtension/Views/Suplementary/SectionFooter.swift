@@ -72,7 +72,7 @@ class SectionFooter: UICollectionReusableView {
     func setupElements() {
         unlockButton.setTitle("Unlock this Sticker Pack", for: .normal)
         restoreButton.setTitle("Restore Purchase", for: .normal)
-        checkLabel.text = "Check out some more"
+        checkLabel.text = "CHECK OUT SOME MORE"
         
         unlockButton.titleLabel?.font = UIFont.sfProTextSemibold(ofSize: 17)
         restoreButton.titleLabel?.font = UIFont.sfProTextSemibold(ofSize: 17)

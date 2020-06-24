@@ -55,6 +55,7 @@ class StickersViewController: UIViewController {
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = false
     
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "App Features Light Mode Icon"), style: .plain, target: self, action: #selector(сubesButtonTapped))
         
@@ -64,9 +65,6 @@ class StickersViewController: UIViewController {
     func reloadData() {
         currentSnapshot = NSDiffableDataSourceSnapshot<Section, StickerModel>()
         currentSnapshot.appendSections([.main])
-        for i in 0...0 {
-            stickers.removeLast()
-        }
         
         currentSnapshot.appendItems(stickers, toSection: .main)
         
@@ -95,7 +93,7 @@ class StickersViewController: UIViewController {
         ])
         
         let bottomArea = -(UIApplication.shared.keyWindow?.safeAreaInsets.bottom)!
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bottomArea, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: bottomArea, right: 0)
         
     }
     

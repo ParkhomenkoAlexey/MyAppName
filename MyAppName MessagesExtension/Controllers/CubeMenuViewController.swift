@@ -61,6 +61,7 @@ class CubeMenuViewController: UIViewController {
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = false
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Button Back Light Mode Icon"), style: .plain, target: self, action: #selector(back))
         
@@ -93,6 +94,9 @@ class CubeMenuViewController: UIViewController {
         
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.separatorStyle = .none
+        
+        tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset.y = -16
         
     }
 }
