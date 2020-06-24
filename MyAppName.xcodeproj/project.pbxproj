@@ -47,6 +47,13 @@
 		F022E493249E3D2300BFE089 /* Sticker-21.png in Resources */ = {isa = PBXBuildFile; fileRef = F022E474249E3D2300BFE089 /* Sticker-21.png */; };
 		F022E495249E3D7100BFE089 /* StickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022E494249E3D7100BFE089 /* StickerModel.swift */; };
 		F022E49C249F765000BFE089 /* MyStickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022E49B249F765000BFE089 /* MyStickerCell.swift */; };
+		F0296948249F85C500CAF07D /* SectionFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0296947249F85C500CAF07D /* SectionFooter.swift */; };
+		F029694A249F85CA00CAF07D /* AppCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0296949249F85CA00CAF07D /* AppCollectionCell.swift */; };
+		F029694C249F861700CAF07D /* SF-Pro-Text-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F029694B249F861700CAF07D /* SF-Pro-Text-Semibold.ttf */; };
+		F029694D249F861700CAF07D /* SF-Pro-Text-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F029694B249F861700CAF07D /* SF-Pro-Text-Semibold.ttf */; };
+		F029694F249F861F00CAF07D /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F029694E249F861F00CAF07D /* SFProDisplay-Semibold.ttf */; };
+		F0296950249F861F00CAF07D /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F029694E249F861F00CAF07D /* SFProDisplay-Semibold.ttf */; };
+		F0296952249F863800CAF07D /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0296951249F863800CAF07D /* UIFont + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +124,11 @@
 		F022E474249E3D2300BFE089 /* Sticker-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sticker-21.png"; sourceTree = "<group>"; };
 		F022E494249E3D7100BFE089 /* StickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerModel.swift; sourceTree = "<group>"; };
 		F022E49B249F765000BFE089 /* MyStickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStickerCell.swift; sourceTree = "<group>"; };
+		F0296947249F85C500CAF07D /* SectionFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionFooter.swift; sourceTree = "<group>"; };
+		F0296949249F85CA00CAF07D /* AppCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCollectionCell.swift; sourceTree = "<group>"; };
+		F029694B249F861700CAF07D /* SF-Pro-Text-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.ttf"; sourceTree = "<group>"; };
+		F029694E249F861F00CAF07D /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		F0296951249F863800CAF07D /* UIFont + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +186,12 @@
 				F022E453249E3B7F00BFE089 /* StickersViewController.swift */,
 				F022E49D249F765300BFE089 /* Views */,
 				F022E49A249F764200BFE089 /* Models */,
+				F0296953249F86A400CAF07D /* Extensions */,
 				F022E455249E3CD000BFE089 /* Resources */,
 				F022E444249E3AC900BFE089 /* MainInterface.storyboard */,
 				F022E447249E3ACA00BFE089 /* Assets.xcassets */,
+				F029694B249F861700CAF07D /* SF-Pro-Text-Semibold.ttf */,
+				F029694E249F861F00CAF07D /* SFProDisplay-Semibold.ttf */,
 				F022E449249E3ACA00BFE089 /* Info.plist */,
 			);
 			path = "MyAppName MessagesExtension";
@@ -231,9 +246,35 @@
 		F022E49D249F765300BFE089 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F022E49B249F765000BFE089 /* MyStickerCell.swift */,
+				F0296954249F86BE00CAF07D /* Cells */,
+				F0296955249F86C500CAF07D /* Suplementary */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F0296953249F86A400CAF07D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0296951249F863800CAF07D /* UIFont + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F0296954249F86BE00CAF07D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F022E49B249F765000BFE089 /* MyStickerCell.swift */,
+				F0296949249F85CA00CAF07D /* AppCollectionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F0296955249F86C500CAF07D /* Suplementary */ = {
+			isa = PBXGroup;
+			children = (
+				F0296947249F85C500CAF07D /* SectionFooter.swift */,
+			);
+			path = Suplementary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +357,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F022E434249E3AC900BFE089 /* Assets.xcassets in Resources */,
+				F029694F249F861F00CAF07D /* SFProDisplay-Semibold.ttf in Resources */,
+				F029694C249F861700CAF07D /* SF-Pro-Text-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +389,7 @@
 				F022E475249E3D2300BFE089 /* Sticker-15.png in Resources */,
 				F022E480249E3D2300BFE089 /* StickerData.plist in Resources */,
 				F022E485249E3D2300BFE089 /* Sticker-11.png in Resources */,
+				F0296950249F861F00CAF07D /* SFProDisplay-Semibold.ttf in Resources */,
 				F022E47B249E3D2300BFE089 /* Sticker-30.png in Resources */,
 				F022E446249E3AC900BFE089 /* MainInterface.storyboard in Resources */,
 				F022E491249E3D2300BFE089 /* Sticker-9.png in Resources */,
@@ -354,6 +398,7 @@
 				F022E476249E3D2300BFE089 /* Sticker-22.png in Resources */,
 				F022E47D249E3D2300BFE089 /* Sticker-23.png in Resources */,
 				F022E488249E3D2300BFE089 /* Sticker-4.png in Resources */,
+				F029694D249F861700CAF07D /* SF-Pro-Text-Semibold.ttf in Resources */,
 				F022E48F249E3D2300BFE089 /* Sticker-3.png in Resources */,
 				F022E47A249E3D2300BFE089 /* Sticker-13.png in Resources */,
 			);
@@ -366,9 +411,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0296948249F85C500CAF07D /* SectionFooter.swift in Sources */,
+				F029694A249F85CA00CAF07D /* AppCollectionCell.swift in Sources */,
 				F022E495249E3D7100BFE089 /* StickerModel.swift in Sources */,
 				F022E49C249F765000BFE089 /* MyStickerCell.swift in Sources */,
 				F022E454249E3B7F00BFE089 /* StickersViewController.swift in Sources */,
+				F0296952249F863800CAF07D /* UIFont + Extension.swift in Sources */,
 				F022E443249E3AC900BFE089 /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

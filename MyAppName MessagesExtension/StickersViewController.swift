@@ -77,6 +77,8 @@ class StickersViewController: UIViewController {
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: setupCompositionalLayout())
         collectionView.backgroundColor = .systemBackground
         
+        collectionView.register(SectionFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: SectionFooter.reuseId)
+        
         collectionView.register(MyStickerCell.self, forCellWithReuseIdentifier: MyStickerCell.reuseId)
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -110,7 +112,11 @@ class StickersViewController: UIViewController {
             
 
             let section = NSCollectionLayoutSection(group: group)
-            section.contentInsets = NSDirectionalEdgeInsets(top: -8, leading: 8, bottom: -8, trailing: 8)
+            section.contentInsets = NSDirectionalEdgeInsets(top: -8, leading: 8, bottom: 8, trailing: 8)
+            
+            let sectionFooterrSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(530))
+            let sectionFooter = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: sectionFooterrSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
+            section.boundarySupplementaryItems = [sectionFooter]
             
             return section
         }
@@ -127,6 +133,18 @@ class StickersViewController: UIViewController {
             return cell
             
         })
+        
+        dataSource.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
+            
+            if let sectionFooter = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionFooter.reuseId, for: indexPath) as? SectionFooter {
+                
+                return sectionFooter
+            } else {
+                fatalError("Cannot create new supplementary")
+            }
+            
+            
+        }
     }
 }
 
