@@ -305,15 +305,14 @@
 			isa = PBXGroup;
 			children = (
 				F022E442249E3AC900BFE089 /* MessagesViewController.swift */,
-				F0CD191024A3604A00494A18 /* StickersViewController.swift */,
-				F0CD192724A360A000494A18 /* CubeMenuViewController.swift */,
-				F0CD196E24A3738100494A18 /* UserSettings.swift */,
-				F0CD192224A3606900494A18 /* WhatsApp Files */,
-				F022E49D249F765300BFE089 /* Views */,
+				F0CD197024A378D300494A18 /* Services */,
 				F022E49A249F764200BFE089 /* Models */,
+				F0CD197124A378DC00494A18 /* Controllers */,
+				F022E49D249F765300BFE089 /* Views */,
+				F0CD192224A3606900494A18 /* WhatsApp Files */,
 				F0296953249F86A400CAF07D /* Extensions */,
-				F022E455249E3CD000BFE089 /* Resources */,
-				F0CD196924A360D800494A18 /* WhatsApp Resources */,
+				F022E455249E3CD000BFE089 /* Stickers iMessage */,
+				F0CD196924A360D800494A18 /* Stickers and Icon WhatsApp */,
 				F022E444249E3AC900BFE089 /* MainInterface.storyboard */,
 				F022E447249E3ACA00BFE089 /* Assets.xcassets */,
 				F029694B249F861700CAF07D /* SF-Pro-Text-Semibold.ttf */,
@@ -324,7 +323,7 @@
 			path = "MyAppName MessagesExtension";
 			sourceTree = "<group>";
 		};
-		F022E455249E3CD000BFE089 /* Resources */ = {
+		F022E455249E3CD000BFE089 /* Stickers iMessage */ = {
 			isa = PBXGroup;
 			children = (
 				F022E45A249E3D2100BFE089 /* Sticker-1.png */,
@@ -359,7 +358,7 @@
 				F022E45C249E3D2100BFE089 /* Sticker-30.png */,
 				F022E461249E3D2100BFE089 /* StickerData.plist */,
 			);
-			path = Resources;
+			path = "Stickers iMessage";
 			sourceTree = "<group>";
 		};
 		F022E49A249F764200BFE089 /* Models */ = {
@@ -421,7 +420,7 @@
 			path = "WhatsApp Files";
 			sourceTree = "<group>";
 		};
-		F0CD196924A360D800494A18 /* WhatsApp Resources */ = {
+		F0CD196924A360D800494A18 /* Stickers and Icon WhatsApp */ = {
 			isa = PBXGroup;
 			children = (
 				F0CD193124A360CE00494A18 /* WASticker-1.png */,
@@ -456,7 +455,7 @@
 				F0CD194824A360D000494A18 /* WASticker-30.png */,
 				F0CD192E24A360CD00494A18 /* WATrayIcon.png */,
 			);
-			path = "WhatsApp Resources";
+			path = "Stickers and Icon WhatsApp";
 			sourceTree = "<group>";
 		};
 		F0CD196D24A3730400494A18 /* AppFeature */ = {
@@ -466,6 +465,23 @@
 				F0CD192524A3609C00494A18 /* ImageTableCell.swift */,
 			);
 			path = AppFeature;
+			sourceTree = "<group>";
+		};
+		F0CD197024A378D300494A18 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F0CD196E24A3738100494A18 /* UserSettings.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F0CD197124A378DC00494A18 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0CD191024A3604A00494A18 /* StickersViewController.swift */,
+				F0CD192724A360A000494A18 /* CubeMenuViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
