@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol HideButtonsDelegate: class {
+protocol FooterButtonsDelegate: class {
     func unlockButtonPressed()
     func restoreButtonPressed()
 }
@@ -23,15 +23,17 @@ class SectionFooter: UICollectionReusableView {
     var buttonsStackView: UIStackView!
     
     var appsCollectionView: UICollectionView! = nil
+    
+    private let cellSize = CGSize(width: 87, height: 87)
     private let sectionInserts = UIEdgeInsets(top: 0, left: 16, bottom: 64, right: 16)
     
-    weak var delegate: HideButtonsDelegate?
+    var buttonsPortraitConstraint: NSLayoutConstraint!
+    var buttonsLandscapeConstraint: NSLayoutConstraint!
+    
+    weak var delegate: FooterButtonsDelegate?
 //    weak var messageDelegate: MessageExtensionDelegate?
 //
 //    var dataSource = MoreAppsDataManager.shared.dataSource
-    
-    var buttonsOnConstraint: NSLayoutConstraint!
-    var buttonsOffConstraint: NSLayoutConstraint!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,6 +44,21 @@ class SectionFooter: UICollectionReusableView {
 //        }
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        appsCollectionView.reloadData() // для оцентрирования layout'a
+        
+        if self.frame.width > self.frame.height {
+            buttonsPortraitConstraint.isActive = false
+            buttonsLandscapeConstraint.isActive = true
+            
+        } else {
+            buttonsLandscapeConstraint.isActive = false
+            buttonsPortraitConstraint.isActive = true
+        }
+    }
+    
     // MARK: - Actions
     @objc func unlockButtonTapped() {
         delegate?.unlockButtonPressed()
@@ -49,12 +66,6 @@ class SectionFooter: UICollectionReusableView {
     
     @objc func restoreButtonTapped() {
         delegate?.restoreButtonPressed()
-    }
-    
-    func hideButtons() {
-        buttonsStackView.removeFromSuperview()
-        buttonsOnConstraint.isActive = false
-        buttonsOffConstraint.isActive = true
     }
     
     // MARK: - Setup View
@@ -112,30 +123,17 @@ class SectionFooter: UICollectionReusableView {
         
         unlockButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         restoreButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+    
+        buttonsPortraitConstraint = buttonsStackView.widthAnchor.constraint(equalTo: widthAnchor, constant: -32)
+        buttonsLandscapeConstraint = buttonsStackView.widthAnchor.constraint(equalToConstant: 382)
         
-        
-        
-        
-      if frame.width > 500 {
-            NSLayoutConstraint.activate([
-                buttonsStackView.topAnchor.constraint(equalTo: topAnchor, constant: 24),
-                buttonsStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-                buttonsStackView.widthAnchor.constraint(equalToConstant: 382)
-            ])
-        } else {
-            NSLayoutConstraint.activate([
-                buttonsStackView.topAnchor.constraint(equalTo: topAnchor, constant: 24),
-                buttonsStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-                buttonsStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            ])
-        }
-        
-        buttonsOffConstraint = checkLabel.topAnchor.constraint(equalTo: topAnchor, constant: 24)
-        buttonsOffConstraint.isActive = false
-        
-        buttonsOnConstraint = checkLabel.topAnchor.constraint(equalTo: buttonsStackView.bottomAnchor, constant: 36)
-        buttonsOnConstraint.isActive = true
         NSLayoutConstraint.activate([
+            buttonsStackView.topAnchor.constraint(equalTo: topAnchor, constant: 24),
+            buttonsStackView.centerXAnchor.constraint(equalTo: centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            checkLabel.topAnchor.constraint(equalTo: buttonsStackView.bottomAnchor, constant: 40),
             checkLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             checkLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             checkLabel.heightAnchor.constraint(equalToConstant: 72)
@@ -145,7 +143,7 @@ class SectionFooter: UICollectionReusableView {
             appsCollectionView.topAnchor.constraint(equalTo: checkLabel.bottomAnchor),
             appsCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             appsCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            appsCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            appsCollectionView.heightAnchor.constraint(equalToConstant: 254)
         ])
     }
     
@@ -158,7 +156,7 @@ class SectionFooter: UICollectionReusableView {
 extension SectionFooter: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return dataSource.count
-        return 10
+        return 8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -177,21 +175,65 @@ extension SectionFooter: UICollectionViewDelegate, UICollectionViewDataSource {
 
 }
 
-// MARK: - UICollectionViewDelegateFlowLayout
-
 extension SectionFooter: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 87, height: 87)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInserts
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 16
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInserts.left
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 16
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        let numberOfCells: Int = Int(ceil(8 / 2)) // 2
+        let totalCellWidth = Int(cellSize.width) * numberOfCells
+        let totalSpacingWidth = Int(sectionInserts.left) * (numberOfCells - 1)
+        
+        if CGFloat(totalCellWidth + totalSpacingWidth) > collectionView.frame.width {
+            return sectionInserts
+        } else {
+        
+            let leftInset = (collectionView.frame.width - CGFloat(totalCellWidth + totalSpacingWidth)) / 2
+            let rightInset = leftInset
+
+            return UIEdgeInsets(top: 0, left: leftInset, bottom: 64, right: rightInset)
+        }
     }
 }
 
+// MARK: - SwiftUI
+import SwiftUI
 
+struct SectionFooterProvider: PreviewProvider {
+    static var previews: some View {
+        Group {
+            Group {
+                ContainerView().edgesIgnoringSafeArea(.all)
+                    .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
+                    .previewDisplayName("iPhone 11 Pro")
+                
+                ContainerView().edgesIgnoringSafeArea(.all)
+                    .previewDevice(PreviewDevice(rawValue: "iPhone 7"))
+                    .previewDisplayName("iPhone 7")
+            }
+        }
+    }
+    
+    struct ContainerView: UIViewControllerRepresentable {
+        
+        let viewController = UINavigationController(rootViewController: StickersViewController())
+        
+        func makeUIViewController(context: UIViewControllerRepresentableContext<SectionFooterProvider.ContainerView>) -> UINavigationController {
+            return viewController
+        }
+        func updateUIViewController(_ uiViewController: SectionFooterProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<SectionFooterProvider.ContainerView>) {
+            
+        }
+    }
+}

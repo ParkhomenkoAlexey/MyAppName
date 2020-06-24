@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		F022E443249E3AC900BFE089 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022E442249E3AC900BFE089 /* MessagesViewController.swift */; };
 		F022E446249E3AC900BFE089 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F022E444249E3AC900BFE089 /* MainInterface.storyboard */; };
 		F022E448249E3ACA00BFE089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F022E447249E3ACA00BFE089 /* Assets.xcassets */; };
-		F022E454249E3B7F00BFE089 /* StickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022E453249E3B7F00BFE089 /* StickersViewController.swift */; };
 		F022E475249E3D2300BFE089 /* Sticker-15.png in Resources */ = {isa = PBXBuildFile; fileRef = F022E456249E3D2100BFE089 /* Sticker-15.png */; };
 		F022E476249E3D2300BFE089 /* Sticker-22.png in Resources */ = {isa = PBXBuildFile; fileRef = F022E457249E3D2100BFE089 /* Sticker-22.png */; };
 		F022E477249E3D2300BFE089 /* Sticker-7.png in Resources */ = {isa = PBXBuildFile; fileRef = F022E458249E3D2100BFE089 /* Sticker-7.png */; };
@@ -56,6 +55,52 @@
 		F029694F249F861F00CAF07D /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F029694E249F861F00CAF07D /* SFProDisplay-Semibold.ttf */; };
 		F0296950249F861F00CAF07D /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F029694E249F861F00CAF07D /* SFProDisplay-Semibold.ttf */; };
 		F0296952249F863800CAF07D /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0296951249F863800CAF07D /* UIFont + Extension.swift */; };
+		F0CD191124A3604A00494A18 /* StickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD191024A3604A00494A18 /* StickersViewController.swift */; };
+		F0CD191A24A3606200494A18 /* StickerPackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD191224A3606100494A18 /* StickerPackManager.swift */; };
+		F0CD191B24A3606200494A18 /* Limits.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD191324A3606100494A18 /* Limits.swift */; };
+		F0CD191C24A3606200494A18 /* Interoperability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD191424A3606100494A18 /* Interoperability.swift */; };
+		F0CD191D24A3606200494A18 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD191524A3606100494A18 /* ImageData.swift */; };
+		F0CD191E24A3606200494A18 /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD191624A3606100494A18 /* Sticker.swift */; };
+		F0CD191F24A3606200494A18 /* WebPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD191724A3606100494A18 /* WebPManager.swift */; };
+		F0CD192024A3606200494A18 /* StickerPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD191824A3606100494A18 /* StickerPack.swift */; };
+		F0CD192124A3606200494A18 /* sticker_packs.wasticker in Resources */ = {isa = PBXBuildFile; fileRef = F0CD191924A3606200494A18 /* sticker_packs.wasticker */; };
+		F0CD192424A3609700494A18 /* MainTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD192324A3609700494A18 /* MainTableCell.swift */; };
+		F0CD192624A3609C00494A18 /* ImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD192524A3609C00494A18 /* ImageTableCell.swift */; };
+		F0CD192824A360A000494A18 /* CubeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD192724A360A000494A18 /* CubeMenuViewController.swift */; };
+		F0CD192A24A360BB00494A18 /* UIAlertController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD192924A360BB00494A18 /* UIAlertController + Extension.swift */; };
+		F0CD194A24A360D000494A18 /* WASticker-21.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD192B24A360CD00494A18 /* WASticker-21.png */; };
+		F0CD194B24A360D000494A18 /* WASticker-15.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD192C24A360CD00494A18 /* WASticker-15.png */; };
+		F0CD194C24A360D000494A18 /* WASticker-8.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD192D24A360CD00494A18 /* WASticker-8.png */; };
+		F0CD194D24A360D000494A18 /* WATrayIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD192E24A360CD00494A18 /* WATrayIcon.png */; };
+		F0CD194E24A360D000494A18 /* WASticker-16.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD192F24A360CD00494A18 /* WASticker-16.png */; };
+		F0CD194F24A360D000494A18 /* WASticker-28.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193024A360CE00494A18 /* WASticker-28.png */; };
+		F0CD195024A360D000494A18 /* WASticker-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193124A360CE00494A18 /* WASticker-1.png */; };
+		F0CD195124A360D000494A18 /* WASticker-25.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193224A360CE00494A18 /* WASticker-25.png */; };
+		F0CD195224A360D000494A18 /* WASticker-6.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193324A360CE00494A18 /* WASticker-6.png */; };
+		F0CD195324A360D000494A18 /* WASticker-11.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193424A360CE00494A18 /* WASticker-11.png */; };
+		F0CD195424A360D000494A18 /* WASticker-2.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193524A360CE00494A18 /* WASticker-2.png */; };
+		F0CD195524A360D000494A18 /* WASticker-22.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193624A360CE00494A18 /* WASticker-22.png */; };
+		F0CD195624A360D000494A18 /* WASticker-4.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193724A360CE00494A18 /* WASticker-4.png */; };
+		F0CD195724A360D000494A18 /* WASticker-17.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193824A360CE00494A18 /* WASticker-17.png */; };
+		F0CD195824A360D000494A18 /* WASticker-20.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193924A360CE00494A18 /* WASticker-20.png */; };
+		F0CD195924A360D000494A18 /* WASticker-14.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193A24A360CF00494A18 /* WASticker-14.png */; };
+		F0CD195A24A360D000494A18 /* WASticker-13.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193B24A360CF00494A18 /* WASticker-13.png */; };
+		F0CD195B24A360D000494A18 /* WASticker-19.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193C24A360CF00494A18 /* WASticker-19.png */; };
+		F0CD195C24A360D000494A18 /* WASticker-18.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193D24A360CF00494A18 /* WASticker-18.png */; };
+		F0CD195D24A360D000494A18 /* WASticker-29.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193E24A360CF00494A18 /* WASticker-29.png */; };
+		F0CD195E24A360D000494A18 /* WASticker-5.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD193F24A360CF00494A18 /* WASticker-5.png */; };
+		F0CD195F24A360D000494A18 /* WASticker-10.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194024A360CF00494A18 /* WASticker-10.png */; };
+		F0CD196024A360D000494A18 /* WASticker-3.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194124A360CF00494A18 /* WASticker-3.png */; };
+		F0CD196124A360D000494A18 /* WASticker-9.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194224A360CF00494A18 /* WASticker-9.png */; };
+		F0CD196224A360D000494A18 /* WASticker-12.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194324A360D000494A18 /* WASticker-12.png */; };
+		F0CD196324A360D000494A18 /* WASticker-23.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194424A360D000494A18 /* WASticker-23.png */; };
+		F0CD196424A360D000494A18 /* WASticker-7.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194524A360D000494A18 /* WASticker-7.png */; };
+		F0CD196524A360D000494A18 /* WASticker-24.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194624A360D000494A18 /* WASticker-24.png */; };
+		F0CD196624A360D000494A18 /* WASticker-27.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194724A360D000494A18 /* WASticker-27.png */; };
+		F0CD196724A360D000494A18 /* WASticker-30.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194824A360D000494A18 /* WASticker-30.png */; };
+		F0CD196824A360D000494A18 /* WASticker-26.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194924A360D000494A18 /* WASticker-26.png */; };
+		F0CD196B24A360EB00494A18 /* SFUIText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0CD196A24A360EB00494A18 /* SFUIText-Regular.ttf */; };
+		F0CD196C24A360F100494A18 /* SFUIText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0CD196A24A360EB00494A18 /* SFUIText-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +143,6 @@
 		F022E445249E3AC900BFE089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		F022E447249E3ACA00BFE089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F022E449249E3ACA00BFE089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F022E453249E3B7F00BFE089 /* StickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickersViewController.swift; sourceTree = "<group>"; };
 		F022E456249E3D2100BFE089 /* Sticker-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sticker-15.png"; sourceTree = "<group>"; };
 		F022E457249E3D2100BFE089 /* Sticker-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sticker-22.png"; sourceTree = "<group>"; };
 		F022E458249E3D2100BFE089 /* Sticker-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sticker-7.png"; sourceTree = "<group>"; };
@@ -137,6 +181,51 @@
 		F029694B249F861700CAF07D /* SF-Pro-Text-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.ttf"; sourceTree = "<group>"; };
 		F029694E249F861F00CAF07D /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
 		F0296951249F863800CAF07D /* UIFont + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
+		F0CD191024A3604A00494A18 /* StickersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickersViewController.swift; sourceTree = "<group>"; };
+		F0CD191224A3606100494A18 /* StickerPackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPackManager.swift; sourceTree = "<group>"; };
+		F0CD191324A3606100494A18 /* Limits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Limits.swift; sourceTree = "<group>"; };
+		F0CD191424A3606100494A18 /* Interoperability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interoperability.swift; sourceTree = "<group>"; };
+		F0CD191524A3606100494A18 /* ImageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		F0CD191624A3606100494A18 /* Sticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
+		F0CD191724A3606100494A18 /* WebPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebPManager.swift; sourceTree = "<group>"; };
+		F0CD191824A3606100494A18 /* StickerPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPack.swift; sourceTree = "<group>"; };
+		F0CD191924A3606200494A18 /* sticker_packs.wasticker */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sticker_packs.wasticker; sourceTree = "<group>"; };
+		F0CD192324A3609700494A18 /* MainTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableCell.swift; sourceTree = "<group>"; };
+		F0CD192524A3609C00494A18 /* ImageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableCell.swift; sourceTree = "<group>"; };
+		F0CD192724A360A000494A18 /* CubeMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubeMenuViewController.swift; sourceTree = "<group>"; };
+		F0CD192924A360BB00494A18 /* UIAlertController + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Extension.swift"; sourceTree = "<group>"; };
+		F0CD192B24A360CD00494A18 /* WASticker-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-21.png"; sourceTree = "<group>"; };
+		F0CD192C24A360CD00494A18 /* WASticker-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-15.png"; sourceTree = "<group>"; };
+		F0CD192D24A360CD00494A18 /* WASticker-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-8.png"; sourceTree = "<group>"; };
+		F0CD192E24A360CD00494A18 /* WATrayIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WATrayIcon.png; sourceTree = "<group>"; };
+		F0CD192F24A360CD00494A18 /* WASticker-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-16.png"; sourceTree = "<group>"; };
+		F0CD193024A360CE00494A18 /* WASticker-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-28.png"; sourceTree = "<group>"; };
+		F0CD193124A360CE00494A18 /* WASticker-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-1.png"; sourceTree = "<group>"; };
+		F0CD193224A360CE00494A18 /* WASticker-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-25.png"; sourceTree = "<group>"; };
+		F0CD193324A360CE00494A18 /* WASticker-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-6.png"; sourceTree = "<group>"; };
+		F0CD193424A360CE00494A18 /* WASticker-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-11.png"; sourceTree = "<group>"; };
+		F0CD193524A360CE00494A18 /* WASticker-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-2.png"; sourceTree = "<group>"; };
+		F0CD193624A360CE00494A18 /* WASticker-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-22.png"; sourceTree = "<group>"; };
+		F0CD193724A360CE00494A18 /* WASticker-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-4.png"; sourceTree = "<group>"; };
+		F0CD193824A360CE00494A18 /* WASticker-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-17.png"; sourceTree = "<group>"; };
+		F0CD193924A360CE00494A18 /* WASticker-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-20.png"; sourceTree = "<group>"; };
+		F0CD193A24A360CF00494A18 /* WASticker-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-14.png"; sourceTree = "<group>"; };
+		F0CD193B24A360CF00494A18 /* WASticker-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-13.png"; sourceTree = "<group>"; };
+		F0CD193C24A360CF00494A18 /* WASticker-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-19.png"; sourceTree = "<group>"; };
+		F0CD193D24A360CF00494A18 /* WASticker-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-18.png"; sourceTree = "<group>"; };
+		F0CD193E24A360CF00494A18 /* WASticker-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-29.png"; sourceTree = "<group>"; };
+		F0CD193F24A360CF00494A18 /* WASticker-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-5.png"; sourceTree = "<group>"; };
+		F0CD194024A360CF00494A18 /* WASticker-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-10.png"; sourceTree = "<group>"; };
+		F0CD194124A360CF00494A18 /* WASticker-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-3.png"; sourceTree = "<group>"; };
+		F0CD194224A360CF00494A18 /* WASticker-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-9.png"; sourceTree = "<group>"; };
+		F0CD194324A360D000494A18 /* WASticker-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-12.png"; sourceTree = "<group>"; };
+		F0CD194424A360D000494A18 /* WASticker-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-23.png"; sourceTree = "<group>"; };
+		F0CD194524A360D000494A18 /* WASticker-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-7.png"; sourceTree = "<group>"; };
+		F0CD194624A360D000494A18 /* WASticker-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-24.png"; sourceTree = "<group>"; };
+		F0CD194724A360D000494A18 /* WASticker-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-27.png"; sourceTree = "<group>"; };
+		F0CD194824A360D000494A18 /* WASticker-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-30.png"; sourceTree = "<group>"; };
+		F0CD194924A360D000494A18 /* WASticker-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-26.png"; sourceTree = "<group>"; };
+		F0CD196A24A360EB00494A18 /* SFUIText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +257,6 @@
 				C35FE6EA07B92E1019FEA026 /* Pods-MyAppName MessagesExtension.debug.xcconfig */,
 				7BB143802EAD352CD08A328E /* Pods-MyAppName MessagesExtension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -215,15 +303,19 @@
 			isa = PBXGroup;
 			children = (
 				F022E442249E3AC900BFE089 /* MessagesViewController.swift */,
-				F022E453249E3B7F00BFE089 /* StickersViewController.swift */,
+				F0CD191024A3604A00494A18 /* StickersViewController.swift */,
+				F0CD192724A360A000494A18 /* CubeMenuViewController.swift */,
+				F0CD192224A3606900494A18 /* WhatsApp Files */,
 				F022E49D249F765300BFE089 /* Views */,
 				F022E49A249F764200BFE089 /* Models */,
 				F0296953249F86A400CAF07D /* Extensions */,
 				F022E455249E3CD000BFE089 /* Resources */,
+				F0CD196924A360D800494A18 /* WhatsApp Resources */,
 				F022E444249E3AC900BFE089 /* MainInterface.storyboard */,
 				F022E447249E3ACA00BFE089 /* Assets.xcassets */,
 				F029694B249F861700CAF07D /* SF-Pro-Text-Semibold.ttf */,
 				F029694E249F861F00CAF07D /* SFProDisplay-Semibold.ttf */,
+				F0CD196A24A360EB00494A18 /* SFUIText-Regular.ttf */,
 				F022E449249E3ACA00BFE089 /* Info.plist */,
 			);
 			path = "MyAppName MessagesExtension";
@@ -288,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				F0296951249F863800CAF07D /* UIFont + Extension.swift */,
+				F0CD192924A360BB00494A18 /* UIAlertController + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,6 +388,8 @@
 		F0296954249F86BE00CAF07D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F0CD192324A3609700494A18 /* MainTableCell.swift */,
+				F0CD192524A3609C00494A18 /* ImageTableCell.swift */,
 				F022E49B249F765000BFE089 /* MyStickerCell.swift */,
 				F0296949249F85CA00CAF07D /* AppCollectionCell.swift */,
 			);
@@ -307,6 +402,59 @@
 				F0296947249F85C500CAF07D /* SectionFooter.swift */,
 			);
 			path = Suplementary;
+			sourceTree = "<group>";
+		};
+		F0CD192224A3606900494A18 /* WhatsApp Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0CD191324A3606100494A18 /* Limits.swift */,
+				F0CD191824A3606100494A18 /* StickerPack.swift */,
+				F0CD191624A3606100494A18 /* Sticker.swift */,
+				F0CD191524A3606100494A18 /* ImageData.swift */,
+				F0CD191424A3606100494A18 /* Interoperability.swift */,
+				F0CD191224A3606100494A18 /* StickerPackManager.swift */,
+				F0CD191724A3606100494A18 /* WebPManager.swift */,
+				F0CD191924A3606200494A18 /* sticker_packs.wasticker */,
+			);
+			path = "WhatsApp Files";
+			sourceTree = "<group>";
+		};
+		F0CD196924A360D800494A18 /* WhatsApp Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F0CD193124A360CE00494A18 /* WASticker-1.png */,
+				F0CD193524A360CE00494A18 /* WASticker-2.png */,
+				F0CD194124A360CF00494A18 /* WASticker-3.png */,
+				F0CD193724A360CE00494A18 /* WASticker-4.png */,
+				F0CD193F24A360CF00494A18 /* WASticker-5.png */,
+				F0CD193324A360CE00494A18 /* WASticker-6.png */,
+				F0CD194524A360D000494A18 /* WASticker-7.png */,
+				F0CD192D24A360CD00494A18 /* WASticker-8.png */,
+				F0CD194224A360CF00494A18 /* WASticker-9.png */,
+				F0CD194024A360CF00494A18 /* WASticker-10.png */,
+				F0CD193424A360CE00494A18 /* WASticker-11.png */,
+				F0CD194324A360D000494A18 /* WASticker-12.png */,
+				F0CD193B24A360CF00494A18 /* WASticker-13.png */,
+				F0CD193A24A360CF00494A18 /* WASticker-14.png */,
+				F0CD192C24A360CD00494A18 /* WASticker-15.png */,
+				F0CD192F24A360CD00494A18 /* WASticker-16.png */,
+				F0CD193824A360CE00494A18 /* WASticker-17.png */,
+				F0CD193D24A360CF00494A18 /* WASticker-18.png */,
+				F0CD193C24A360CF00494A18 /* WASticker-19.png */,
+				F0CD193924A360CE00494A18 /* WASticker-20.png */,
+				F0CD192B24A360CD00494A18 /* WASticker-21.png */,
+				F0CD193624A360CE00494A18 /* WASticker-22.png */,
+				F0CD194424A360D000494A18 /* WASticker-23.png */,
+				F0CD194624A360D000494A18 /* WASticker-24.png */,
+				F0CD193224A360CE00494A18 /* WASticker-25.png */,
+				F0CD194924A360D000494A18 /* WASticker-26.png */,
+				F0CD194724A360D000494A18 /* WASticker-27.png */,
+				F0CD193024A360CE00494A18 /* WASticker-28.png */,
+				F0CD193E24A360CF00494A18 /* WASticker-29.png */,
+				F0CD194824A360D000494A18 /* WASticker-30.png */,
+				F0CD192E24A360CD00494A18 /* WATrayIcon.png */,
+			);
+			path = "WhatsApp Resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +543,7 @@
 				F022E434249E3AC900BFE089 /* Assets.xcassets in Resources */,
 				F029694F249F861F00CAF07D /* SFProDisplay-Semibold.ttf in Resources */,
 				F029694C249F861700CAF07D /* SF-Pro-Text-Semibold.ttf in Resources */,
+				F0CD196C24A360F100494A18 /* SFUIText-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,31 +552,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				F022E481249E3D2300BFE089 /* Sticker-10.png in Resources */,
+				F0CD194C24A360D000494A18 /* WASticker-8.png in Resources */,
 				F022E47C249E3D2300BFE089 /* Sticker-12.png in Resources */,
+				F0CD196524A360D000494A18 /* WASticker-24.png in Resources */,
+				F0CD195B24A360D000494A18 /* WASticker-19.png in Resources */,
+				F0CD195824A360D000494A18 /* WASticker-20.png in Resources */,
 				F022E48E249E3D2300BFE089 /* Sticker-8.png in Resources */,
 				F022E47F249E3D2300BFE089 /* Sticker-2.png in Resources */,
+				F0CD192124A3606200494A18 /* sticker_packs.wasticker in Resources */,
 				F022E47E249E3D2300BFE089 /* Sticker-20.png in Resources */,
 				F022E489249E3D2300BFE089 /* Sticker-17.png in Resources */,
 				F022E493249E3D2300BFE089 /* Sticker-21.png in Resources */,
 				F022E484249E3D2300BFE089 /* Sticker-29.png in Resources */,
 				F022E477249E3D2300BFE089 /* Sticker-7.png in Resources */,
 				F022E483249E3D2300BFE089 /* Sticker-27.png in Resources */,
+				F0CD196B24A360EB00494A18 /* SFUIText-Regular.ttf in Resources */,
+				F0CD196824A360D000494A18 /* WASticker-26.png in Resources */,
+				F0CD196024A360D000494A18 /* WASticker-3.png in Resources */,
+				F0CD194A24A360D000494A18 /* WASticker-21.png in Resources */,
+				F0CD195224A360D000494A18 /* WASticker-6.png in Resources */,
+				F0CD195D24A360D000494A18 /* WASticker-29.png in Resources */,
 				F022E48A249E3D2300BFE089 /* Sticker-14.png in Resources */,
 				F022E492249E3D2300BFE089 /* Sticker-16.png in Resources */,
+				F0CD195E24A360D000494A18 /* WASticker-5.png in Resources */,
+				F0CD194F24A360D000494A18 /* WASticker-28.png in Resources */,
+				F0CD195A24A360D000494A18 /* WASticker-13.png in Resources */,
+				F0CD195724A360D000494A18 /* WASticker-17.png in Resources */,
 				F022E478249E3D2300BFE089 /* Sticker-26.png in Resources */,
+				F0CD196124A360D000494A18 /* WASticker-9.png in Resources */,
 				F022E48D249E3D2300BFE089 /* Sticker-18.png in Resources */,
 				F022E479249E3D2300BFE089 /* Sticker-1.png in Resources */,
 				F022E48C249E3D2300BFE089 /* Sticker-24.png in Resources */,
 				F022E448249E3ACA00BFE089 /* Assets.xcassets in Resources */,
 				F022E490249E3D2300BFE089 /* Sticker-19.png in Resources */,
+				F0CD195024A360D000494A18 /* WASticker-1.png in Resources */,
 				F022E486249E3D2300BFE089 /* Sticker-25.png in Resources */,
+				F0CD195624A360D000494A18 /* WASticker-4.png in Resources */,
+				F0CD195324A360D000494A18 /* WASticker-11.png in Resources */,
 				F022E482249E3D2300BFE089 /* Sticker-6.png in Resources */,
+				F0CD196624A360D000494A18 /* WASticker-27.png in Resources */,
 				F022E475249E3D2300BFE089 /* Sticker-15.png in Resources */,
+				F0CD196224A360D000494A18 /* WASticker-12.png in Resources */,
+				F0CD195424A360D000494A18 /* WASticker-2.png in Resources */,
+				F0CD195F24A360D000494A18 /* WASticker-10.png in Resources */,
+				F0CD196724A360D000494A18 /* WASticker-30.png in Resources */,
 				F022E480249E3D2300BFE089 /* StickerData.plist in Resources */,
 				F022E485249E3D2300BFE089 /* Sticker-11.png in Resources */,
+				F0CD194D24A360D000494A18 /* WATrayIcon.png in Resources */,
+				F0CD194B24A360D000494A18 /* WASticker-15.png in Resources */,
+				F0CD195524A360D000494A18 /* WASticker-22.png in Resources */,
 				F0296950249F861F00CAF07D /* SFProDisplay-Semibold.ttf in Resources */,
 				F022E47B249E3D2300BFE089 /* Sticker-30.png in Resources */,
+				F0CD195124A360D000494A18 /* WASticker-25.png in Resources */,
+				F0CD195C24A360D000494A18 /* WASticker-18.png in Resources */,
 				F022E446249E3AC900BFE089 /* MainInterface.storyboard in Resources */,
+				F0CD194E24A360D000494A18 /* WASticker-16.png in Resources */,
 				F022E491249E3D2300BFE089 /* Sticker-9.png in Resources */,
 				F022E48B249E3D2300BFE089 /* Sticker-5.png in Resources */,
 				F022E487249E3D2300BFE089 /* Sticker-28.png in Resources */,
@@ -435,7 +614,10 @@
 				F022E47D249E3D2300BFE089 /* Sticker-23.png in Resources */,
 				F022E488249E3D2300BFE089 /* Sticker-4.png in Resources */,
 				F029694D249F861700CAF07D /* SF-Pro-Text-Semibold.ttf in Resources */,
+				F0CD196424A360D000494A18 /* WASticker-7.png in Resources */,
 				F022E48F249E3D2300BFE089 /* Sticker-3.png in Resources */,
+				F0CD195924A360D000494A18 /* WASticker-14.png in Resources */,
+				F0CD196324A360D000494A18 /* WASticker-23.png in Resources */,
 				F022E47A249E3D2300BFE089 /* Sticker-13.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,13 +693,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CD192424A3609700494A18 /* MainTableCell.swift in Sources */,
 				F0296948249F85C500CAF07D /* SectionFooter.swift in Sources */,
+				F0CD191E24A3606200494A18 /* Sticker.swift in Sources */,
 				F029694A249F85CA00CAF07D /* AppCollectionCell.swift in Sources */,
+				F0CD191F24A3606200494A18 /* WebPManager.swift in Sources */,
+				F0CD191A24A3606200494A18 /* StickerPackManager.swift in Sources */,
+				F0CD191C24A3606200494A18 /* Interoperability.swift in Sources */,
 				F022E495249E3D7100BFE089 /* StickerModel.swift in Sources */,
+				F0CD192A24A360BB00494A18 /* UIAlertController + Extension.swift in Sources */,
 				F022E49C249F765000BFE089 /* MyStickerCell.swift in Sources */,
-				F022E454249E3B7F00BFE089 /* StickersViewController.swift in Sources */,
+				F0CD191D24A3606200494A18 /* ImageData.swift in Sources */,
+				F0CD192624A3609C00494A18 /* ImageTableCell.swift in Sources */,
+				F0CD191124A3604A00494A18 /* StickersViewController.swift in Sources */,
+				F0CD192024A3606200494A18 /* StickerPack.swift in Sources */,
 				F0296952249F863800CAF07D /* UIFont + Extension.swift in Sources */,
+				F0CD191B24A3606200494A18 /* Limits.swift in Sources */,
 				F022E443249E3AC900BFE089 /* MessagesViewController.swift in Sources */,
+				F0CD192824A360A000494A18 /* CubeMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

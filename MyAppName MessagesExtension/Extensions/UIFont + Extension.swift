@@ -17,6 +17,9 @@ extension UIFont {
     static func sfProTextSemibold(ofSize size: CGFloat) -> UIFont? {
         return UIFont.init(name: "SFProText-Semibold", size: size)
     }
-    
+
+    static func sfProTextRegular(ofSize size: CGFloat) -> UIFont? {
+        return UIFont.init(name: "SFUIText-Regular", size: size)
+    }
 }
 
