@@ -27,13 +27,12 @@ class MessagesViewController: MSMessagesAppViewController {
     override func willBecomeActive(with conversation: MSConversation) {
         super.willBecomeActive(with: conversation)
         
-        print(#function)
         present(with: self.presentationStyle)
     }
 
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         super.didTransition(to: presentationStyle)
-        print(#function)
+        
         present(with: presentationStyle)
     }
     
@@ -43,11 +42,6 @@ class MessagesViewController: MSMessagesAppViewController {
         
         for child in children {
 
-            if let navigtionVC = child as? UINavigationController {
-                if let vc = navigtionVC.topViewController as? StickersViewController {
-                    rootVC.count = vc.count
-                }
-            }
             
             child.willMove(toParent: nil)
             child.view.removeFromSuperview()

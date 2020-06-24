@@ -13,8 +13,6 @@ class StickersViewController: UIViewController {
 
     var stickers = [StickerModel]()
     
-    var count: Int = 6
-    
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, StickerModel>! = nil
     var currentSnapshot: NSDiffableDataSourceSnapshot<Section, StickerModel>! = nil
@@ -55,8 +53,8 @@ class StickersViewController: UIViewController {
     
     func setupNavigationBar() {
         
-        navigationController?.navigationBar.barTintColor = .tertiarySystemBackground
-        navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "App Features Light Mode Icon"), style: .plain, target: self, action: #selector(сubesButtonTapped))
         
@@ -96,12 +94,6 @@ class StickersViewController: UIViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
-        let keyWindow = UIApplication.shared.connectedScenes
-        .filter({$0.activationState == .foregroundActive})
-        .map({$0 as? UIWindowScene})
-        .compactMap({$0})
-        .first?.windows
-        .filter({$0.isKeyWindow}).first
         let bottomArea = -(UIApplication.shared.keyWindow?.safeAreaInsets.bottom)!
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: bottomArea, right: 0)
         
@@ -111,7 +103,7 @@ class StickersViewController: UIViewController {
     func setupCompositionalLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, _) -> NSCollectionLayoutSection? in
             
-            let float = CGFloat(1 / Double(self.count))
+            let float = CGFloat(1 / Double(UserSettings.count))
             
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(float),
                                                  heightDimension: .fractionalHeight(1.0))
@@ -177,7 +169,13 @@ extension StickersViewController: FooterButtonsDelegate {
     }
     
     @objc func loopButtonTapped() {
-        count += 1
+        
+        if UserSettings.count > 5 {
+            UserSettings.count = 3
+        } else {
+            UserSettings.count += 1
+        }
+        
         dataSource.apply(currentSnapshot, animatingDifferences: true)
     }
     

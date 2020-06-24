@@ -18,9 +18,9 @@ class ImageTableCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupElements()
     }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    func setupCell(image: UIImage) {
+        self.cubeImage.image = image
     }
 
     func setupElements() {
@@ -28,8 +28,7 @@ class ImageTableCell: UITableViewCell {
         backgroundColor = .tertiarySystemBackground
 
         cubeImage.translatesAutoresizingMaskIntoConstraints = false
-        cubeImage.contentMode = .scaleAspectFill
-        cubeImage.image = #imageLiteral(resourceName: "Block 4")
+        cubeImage.contentMode = .scaleAspectFit
 
         addSubview(cubeImage)
 
@@ -43,8 +42,7 @@ class ImageTableCell: UITableViewCell {
 
     }
 
-    func setupCell(image: UIImage) {
-        self.cubeImage.image = image
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-
 }

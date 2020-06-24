@@ -126,6 +126,10 @@
         {
             "image_file": "WASticker-29.png",
             "emojis": ["🖐","👋"]
+        },
+        {
+            "image_file": "WASticker-30.png",
+            "emojis": ["🖐","👋"]
         }]
     }]
 }

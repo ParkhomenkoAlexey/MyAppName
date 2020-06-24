@@ -101,6 +101,7 @@
 		F0CD196824A360D000494A18 /* WASticker-26.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CD194924A360D000494A18 /* WASticker-26.png */; };
 		F0CD196B24A360EB00494A18 /* SFUIText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0CD196A24A360EB00494A18 /* SFUIText-Regular.ttf */; };
 		F0CD196C24A360F100494A18 /* SFUIText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0CD196A24A360EB00494A18 /* SFUIText-Regular.ttf */; };
+		F0CD196F24A3738100494A18 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD196E24A3738100494A18 /* UserSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +227,7 @@
 		F0CD194824A360D000494A18 /* WASticker-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-30.png"; sourceTree = "<group>"; };
 		F0CD194924A360D000494A18 /* WASticker-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WASticker-26.png"; sourceTree = "<group>"; };
 		F0CD196A24A360EB00494A18 /* SFUIText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Regular.ttf"; sourceTree = "<group>"; };
+		F0CD196E24A3738100494A18 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 				F022E442249E3AC900BFE089 /* MessagesViewController.swift */,
 				F0CD191024A3604A00494A18 /* StickersViewController.swift */,
 				F0CD192724A360A000494A18 /* CubeMenuViewController.swift */,
+				F0CD196E24A3738100494A18 /* UserSettings.swift */,
 				F0CD192224A3606900494A18 /* WhatsApp Files */,
 				F022E49D249F765300BFE089 /* Views */,
 				F022E49A249F764200BFE089 /* Models */,
@@ -388,8 +391,7 @@
 		F0296954249F86BE00CAF07D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F0CD192324A3609700494A18 /* MainTableCell.swift */,
-				F0CD192524A3609C00494A18 /* ImageTableCell.swift */,
+				F0CD196D24A3730400494A18 /* AppFeature */,
 				F022E49B249F765000BFE089 /* MyStickerCell.swift */,
 				F0296949249F85CA00CAF07D /* AppCollectionCell.swift */,
 			);
@@ -455,6 +457,15 @@
 				F0CD192E24A360CD00494A18 /* WATrayIcon.png */,
 			);
 			path = "WhatsApp Resources";
+			sourceTree = "<group>";
+		};
+		F0CD196D24A3730400494A18 /* AppFeature */ = {
+			isa = PBXGroup;
+			children = (
+				F0CD192324A3609700494A18 /* MainTableCell.swift */,
+				F0CD192524A3609C00494A18 /* ImageTableCell.swift */,
+			);
+			path = AppFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -706,6 +717,7 @@
 				F0CD191D24A3606200494A18 /* ImageData.swift in Sources */,
 				F0CD192624A3609C00494A18 /* ImageTableCell.swift in Sources */,
 				F0CD191124A3604A00494A18 /* StickersViewController.swift in Sources */,
+				F0CD196F24A3738100494A18 /* UserSettings.swift in Sources */,
 				F0CD192024A3606200494A18 /* StickerPack.swift in Sources */,
 				F0296952249F863800CAF07D /* UIFont + Extension.swift in Sources */,
 				F0CD191B24A3606200494A18 /* Limits.swift in Sources */,
@@ -854,6 +866,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C35FE6EA07B92E1019FEA026 /* Pods-MyAppName MessagesExtension.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TSZQ4D456H;
@@ -876,6 +889,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7BB143802EAD352CD08A328E /* Pods-MyAppName MessagesExtension.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TSZQ4D456H;

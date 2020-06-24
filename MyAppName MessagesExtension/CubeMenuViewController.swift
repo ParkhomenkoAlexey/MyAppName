@@ -59,8 +59,9 @@ class CubeMenuViewController: UIViewController {
     
     func setupNavigationBar() {
         
-        navigationController?.navigationBar.barTintColor = .tertiarySystemBackground
-        navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Button Back Light Mode Icon"), style: .plain, target: self, action: #selector(back))
         
     }
@@ -107,7 +108,7 @@ extension CubeMenuViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: ImageTableCell.reuseId, for: indexPath) as! ImageTableCell
             cell.selectionStyle = .none
-            cell.setupCell(image: #imageLiteral(resourceName: "Block 4"))
+            cell.setupCell(image: #imageLiteral(resourceName: "Footer Image"))
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: MainTableCell.reuseId, for: indexPath) as! MainTableCell
